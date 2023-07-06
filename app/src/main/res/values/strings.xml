@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MyNEMT</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_current">Current trips</string>
+    <string name="menu_next_day">Next Day Trips</string>
+    <string name="menu_logout">Logout</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="assigned_vehicle_str"></string>
+    <string name="welcome_nemt_bot">Welcome NEMT BOT</string>
+    <string name="clock_in">Clock In</string>
+    <string name="clock_out">Clock Out</string>
+
+</resources>
