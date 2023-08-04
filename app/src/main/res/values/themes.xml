@@ -25,7 +25,6 @@
 
     <style name="Theme.SplashScreenApp" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:statusBarColor">@color/base_color</item>
-
     </style>
 
     <style name="SplashScreenTheme" parent="Theme.SplashScreenApp">

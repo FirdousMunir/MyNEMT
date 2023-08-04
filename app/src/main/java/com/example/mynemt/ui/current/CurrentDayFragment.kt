@@ -1,32 +1,58 @@
 package com.example.mynemt.ui.current
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.mynemt.R
+import androidx.fragment.app.Fragment
+import androidx.viewpager.widget.ViewPager
+import com.example.mynemt.databinding.FragmentCurrentDayBinding
+import com.google.android.material.tabs.TabLayout
 
 class CurrentDayFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = CurrentDayFragment()
-    }
+    private lateinit var binding: FragmentCurrentDayBinding
 
-    private lateinit var viewModel: CurrentDayViewModel
+    var viewPager: ViewPager? = null
+    var tabs: TabLayout? = null
+    var tabsAdapter: CurrentDayTabsAdapter? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_current_day, container, false)
+
+        binding = FragmentCurrentDayBinding.inflate(inflater, container, false)
+        val root: View = binding.root
+
+        try {
+//            viewPager = binding.viewPagerCurrent
+//            tabs = binding.tabsCurrent
+//            tabsAdapter = CurrentDayTabsAdapter(childFragmentManager, requireContext())
+//            viewPager!!.adapter
+//            tabs!!.setupWithViewPager(viewPager)
+//            tabsAdapter!!.notifyDataSetChanged()
+
+
+            tabsAdapter = CurrentDayTabsAdapter(childFragmentManager, requireContext())
+            viewPager = binding.viewPagerCurrent
+            viewPager!!.adapter = tabsAdapter
+            tabs = binding.tabsCurrent
+            tabs!!.setupWithViewPager(viewPager)
+            tabsAdapter!!.notifyDataSetChanged()
+
+
+        } catch (e: Exception) {
+            Log.i(TAG, "pagerExp: ${e.message}")
+        }
+        return root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(CurrentDayViewModel::class.java)
-        // TODO: Use the ViewModel
+    companion object {
+        fun newInstance() = CurrentDayFragment()
+        val TAG: String = "CurrentDayFragmentTAG"
     }
+
 
 }

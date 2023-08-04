@@ -11,4 +11,21 @@
     <string name="clock_in">Clock In</string>
     <string name="clock_out">Clock Out</string>
 
+    <string name="place_holder_time">00:00:00</string>
+    <string name="reset">Reset</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+
+    <string name="company_code">Company Code</string>
+    <string name="enter_user_name">Name</string>
+    <string name="enter_password">Password</string>
+
+    <string name="driver_name">faran.ali</string>
+    <string name="driver_password">manager</string>
+    <string name="comp_code">android</string>
+
+    <string name="tab_trips">Trips</string>
+    <string name="tab_completed">Completed</string>
+    <string name="no_schedule">There is no Schedule Trips.</string>
+
 </resources>

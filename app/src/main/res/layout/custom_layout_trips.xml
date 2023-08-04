@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/allTripsCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="9dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutPickDrop"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:background="@color/blue"
+                android:orientation="vertical"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewTripStatusCurrent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="PU"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textViewTripTimeCurrent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="7dp"
+                        android:gravity="center"
+                        android:text="00:00 AM"
+                        android:textColor="@color/white"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/textViewVehicleTypeCurrent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/round_corner"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="VT"
+                        android:textColor="@color/base_color"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mainDetailLayoutCurrent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/linearLayoutPickDrop"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewTripIdCurrent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="trip id"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textViewPatientNameCurrent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Patient Name"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/textViewPickUpAddressCurrent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="15dp"
+                        android:gravity="start"
+                        android:text="Address"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:id="@+id/textViewDeliverAddressCurrent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="20dp"
+                        android:gravity="start"
+                        android:text="Address"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textViewTripNumberCurrent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="trip number"
+                        android:textColor="@color/base_color"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/mainDetailLayoutCurrent"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/buttonDriverStatusCurrent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/shape_reactangle"
+                    android:backgroundTint="@color/blue"
+                    android:gravity="center"
+                    android:text="Button Status"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/buttonDriverNoShowStatusCurrent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/shape_reactangle"
+                    android:backgroundTint="@color/blue"
+                    android:text="No Show"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/buttonDriverStatusCodeCurrent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Code"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

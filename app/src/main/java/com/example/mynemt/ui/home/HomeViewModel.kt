@@ -20,11 +20,11 @@ class HomeViewModel : ViewModel() {
     val text: LiveData<String> = _text
 
 
-    private val _isClockIn = MutableLiveData<String>().apply {
-        value = preferencesManager.fetchColumn("UserClockIn")
-    }
-
-    val icClockIn :LiveData<String> = _isClockIn
+//    private val _isClockIn = MutableLiveData<String>().apply {
+//        value = preferencesManager.fetchColumn("UserClockIn")
+//    }
+//
+//    val icClockIn :LiveData<String> = _isClockIn
 
 
 
